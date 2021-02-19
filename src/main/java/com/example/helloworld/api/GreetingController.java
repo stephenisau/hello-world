@@ -30,4 +30,9 @@ public class GreetingController {
     public void addGreeting(@RequestBody Greeting greeting) {
         greetingService.addGreeting(greeting);
     }
+
+    @GetMapping
+    public List<Greeting> getAllGreeting() {
+        return greetingService.getAllGreeting();
+    }
 }

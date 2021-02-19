@@ -25,4 +25,12 @@ public class GreetingService {
     public int addGreeting(Greeting greeting) {
         return greetingDao.insertGreeting(greeting);
     }
+
+    /**
+     * 
+     * @return
+     */
+    public List<Greeting> getAllGreeting() {
+        return greetingDao.getAllGreeting();
+    }
 }
