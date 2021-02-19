@@ -1,7 +1,7 @@
 package com.example.helloworld.dao;
 
-import com.example.demo.model.Greeting;
-
+import com.example.helloworld.model.Greeting;
+import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -26,8 +26,8 @@ public class DataAccessService implements GreetingDao {
         return 1;
     }
 
-    @Override
-    public List<Greeting> selectAllGreeting() {
-        return DB;
-    }
+    // @Override
+    // public List<Greeting> selectAllGreeting() {
+    //     return DB;
+    // }
 }

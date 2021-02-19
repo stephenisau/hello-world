@@ -1,9 +1,14 @@
 package com.example.helloworld.api;
+import java.util.List;
 
 import com.example.helloworld.model.Greeting;
 import com.example.helloworld.service.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RequestMapping("/api")
 @RestController
@@ -31,8 +36,8 @@ public class GreetingController {
         greetingService.addGreeting(greeting);
     }
 
-    @GetMapping
-    public List<Greeting> getAllGreeting() {
-        return greetingService.getAllGreeting();
-    }
+    // @GetMapping
+    // public List<Greeting> getAllGreeting() {
+    //     return greetingService.getAllGreeting();
+    // }
 }

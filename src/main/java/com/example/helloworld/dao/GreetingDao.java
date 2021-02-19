@@ -1,6 +1,6 @@
 package com.example.helloworld.dao;
 
-import com.example.demo.model.Greeting;
+import com.example.helloworld.model.Greeting;
 
 import java.util.UUID;
 

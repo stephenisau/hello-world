@@ -2,6 +2,11 @@ package com.example.helloworld.service;
 
 import com.example.helloworld.dao.GreetingDao;
 import com.example.helloworld.model.Greeting;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service 
 public class GreetingService {
@@ -23,14 +28,14 @@ public class GreetingService {
      * @return
      */
     public int addGreeting(Greeting greeting) {
-        return greetingDao.insertGreeting(greeting);
+        return greetingDao.addGreeting(greeting);
     }
 
-    /**
-     * 
-     * @return
-     */
-    public List<Greeting> getAllGreeting() {
-        return greetingDao.getAllGreeting();
-    }
+    // /**
+    //  * 
+    //  * @return
+    //  */
+    // public List<Greeting> getAllGreeting() {
+    //     return greetingDao.getAllGreeting();
+    // }
 }
