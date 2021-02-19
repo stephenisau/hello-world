@@ -25,4 +25,9 @@ public class DataAccessService implements GreetingDao {
         DB.add(new Greeting(id, greeting.getContent()));
         return 1;
     }
+
+    @Override
+    public List<Greeting> selectAllGreeting() {
+        return DB;
+    }
 }
