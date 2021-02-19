@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@Repository
+@Repository("h2")
 public class DataAccessService implements GreetingDao {
 
     /**
