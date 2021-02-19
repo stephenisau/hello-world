@@ -1,6 +1,8 @@
 package com.example.helloworld.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.UUID;
+
 
 public class Greeting {
     private final UUID id;
@@ -11,7 +13,8 @@ public class Greeting {
      * @param id
      * @param content
      */
-    public Greeting(long id, String content) {
+    public Greeting(@JsonProperty("id") UUID id, 
+                    @JsonProperty("name") String content) {
         this.id = id;
         this.content = content;
     }
