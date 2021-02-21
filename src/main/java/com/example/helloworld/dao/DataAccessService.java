@@ -26,8 +26,13 @@ public class DataAccessService implements GreetingDao {
         return 1;
     }
 
-    // @Override
-    // public List<Greeting> selectAllGreeting() {
-    //     return DB;
-    // }
+    /**
+     * Override selectAllGreeting method on interface class. 
+     * Returns data from persisted db layer
+     */
+    @Override
+    public List<Greeting> selectAllGreeting() {
+        return DB;
+    }
+
 }

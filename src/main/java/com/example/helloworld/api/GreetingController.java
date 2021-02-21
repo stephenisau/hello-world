@@ -32,12 +32,17 @@ public class GreetingController {
      * @param greeting
      */
     @PostMapping("/greeting")
-    public void addGreeting(@RequestBody Greeting greeting) {
+    public Greeting addGreeting(@RequestBody Greeting greeting) {
         greetingService.addGreeting(greeting);
+        return greeting;
     }
 
-    // @GetMapping
-    // public List<Greeting> getAllGreeting() {
-    //     return greetingService.getAllGreeting();
-    // }
+    /**
+     * Returns all greeting instances
+     * @return List<Greeting>
+     */
+    @GetMapping("/greetings")
+    public List<Greeting> getAllGreeting() {
+        return greetingService.getAllGreeting();
+    }
 }

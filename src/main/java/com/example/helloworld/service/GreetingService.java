@@ -31,11 +31,12 @@ public class GreetingService {
         return greetingDao.addGreeting(greeting);
     }
 
-    // /**
-    //  * 
-    //  * @return
-    //  */
-    // public List<Greeting> getAllGreeting() {
-    //     return greetingDao.getAllGreeting();
-    // }
+    /**
+     * Returns list of all greetings
+     * @return List<Greeting>
+     */
+    public List<Greeting> getAllGreeting() {
+        return greetingDao.selectAllGreeting();
+    }
+
 }

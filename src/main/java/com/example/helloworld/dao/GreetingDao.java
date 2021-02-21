@@ -3,7 +3,9 @@ package com.example.helloworld.dao;
 import com.example.helloworld.model.Greeting;
 
 import java.util.UUID;
-
+import java.util.List;
+import java.util.Objects;
+// import org.json.simple.JSONObject;
 
 /**
  * This GreetinDao interface has 2 methods to add a greeting.
@@ -23,4 +25,6 @@ public interface GreetingDao {
         UUID id = UUID.randomUUID();
         return insertGreeting(id, greeting);
     }
+
+    List<Greeting> selectAllGreeting();
 }
