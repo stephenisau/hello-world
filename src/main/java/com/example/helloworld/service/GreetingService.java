@@ -39,4 +39,11 @@ public class GreetingService {
         return greetingDao.selectAllGreeting();
     }
 
+    /**
+     * Returns default Greeting "Hello world!"
+     */
+    public Greeting getDefaultJsonGreeting() {
+        return greetingDao.getDefaultJsonGreeting();
+    }
+
 }

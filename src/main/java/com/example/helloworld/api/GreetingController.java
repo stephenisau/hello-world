@@ -45,4 +45,10 @@ public class GreetingController {
     public List<Greeting> getAllGreeting() {
         return greetingService.getAllGreeting();
     }
+
+
+    @GetMapping("/json")
+    public Greeting getDefaultJsonGreeting() {
+        return greetingService.getDefaultJsonGreeting();
+    }
 }

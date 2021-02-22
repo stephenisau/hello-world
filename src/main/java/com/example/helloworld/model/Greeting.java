@@ -5,8 +5,8 @@ import java.util.UUID;
 
 
 public class Greeting {
-    private final UUID id;
-    private final String content;
+    private UUID id;
+    private String content;
 
     /**
      * Greeting constructor
@@ -28,10 +28,26 @@ public class Greeting {
     }
 
     /**
+     * Setter for id
+     * @return
+     */
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    /**
      * Getter for content
      * @return
      */
     public String getContent() {
         return content;
     }
+
+    /**
+     * Setter for content
+     */
+    public void setContent(String content) {
+        this.content = content;
+    }
+
 }

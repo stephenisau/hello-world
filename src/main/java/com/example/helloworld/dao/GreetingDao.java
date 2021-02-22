@@ -27,4 +27,5 @@ public interface GreetingDao {
     }
 
     List<Greeting> selectAllGreeting();
+    Greeting getDefaultJsonGreeting();
 }

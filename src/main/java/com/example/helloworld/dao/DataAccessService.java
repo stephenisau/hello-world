@@ -22,12 +22,17 @@ public class DataAccessService implements GreetingDao {
      */
     @Override
     public int insertGreeting(UUID id, Greeting greeting) {
-        DB.add(new Greeting(id, greeting.getContent()));
-        return 1;
+        try {
+            DB.add(new Greeting(id, greeting.getContent()));
+            return 1;
+        } catch (Exception e) {
+            System.out.println("Something went wrong!");
+            return 0;
+        }
     }
 
     /**
-     * Override selectAllGreeting method on interface class. 
+     * Override selectAllGreeting method in GreetingDao interface
      * Returns data from persisted db layer
      */
     @Override
@@ -35,4 +40,13 @@ public class DataAccessService implements GreetingDao {
         return DB;
     }
 
+    /**
+     * Overrides getDefaultJsonGreeting method in GreetingDao interface.
+     * Returns instance of greeting with UUID
+     */
+    @Override
+    public Greeting getDefaultJsonGreeting() {
+        UUID id = UUID.randomUUID();
+        return new Greeting(id, "hello world");
+    }
 }
